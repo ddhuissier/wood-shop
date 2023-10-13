@@ -1,0 +1,7 @@
+.p-carousel-next, .p-carousel-prev {
+  box-shadow: none !important;
+  border-width: 1px !important;
+  color: #BB9A87;
+  /* if you wish to remove the border or change its color */
+  /* border: transparent !important; */
+}

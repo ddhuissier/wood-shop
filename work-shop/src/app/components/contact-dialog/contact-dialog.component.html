@@ -1,0 +1,25 @@
+<div class="p-15">
+  <h1 mat-dialog-title class="font-primary uppercase">Contact Informations</h1>
+  <div mat-dialog-content>
+    <div>
+      <span class="font-primary uppercase font-bold">CREATOR</span>
+    </div>
+    <div>
+      <span class="font-primary uppercase"> {{ data.name }}</span>
+    </div>
+    <div>
+      <span class="font-primary uppercase"> {{ data.country }}</span>
+    </div>
+    <div>
+      <a
+        className="text-black hover:text-indigo-800 dark:text-white"
+        href="https://wa.me/3365896547"
+        target="_blank"
+      >
+        <p>
+          <fa-icon [classes]="['h-8', 'w-8']" [icon]="faWhatsapp"></fa-icon>
+        </p>
+      </a>
+    </div>
+  </div>
+</div>

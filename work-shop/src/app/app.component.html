@@ -1,0 +1,28 @@
+<div
+  class="flex w-full justify-center text-center py-3 font-bold bg-white dark:bg-slate-800 text-black dark:text-white"
+>
+  <button
+    (click)="
+      this.darkModeService.darkMode.set(!this.darkModeService.darkMode())
+    "
+  >
+    <mat-icon
+      *ngIf="this.darkModeService.darkMode()"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="light_mode"
+    ></mat-icon>
+    <mat-icon
+      *ngIf="!this.darkModeService.darkMode()"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="dark_mode"
+    ></mat-icon>
+  </button>
+  <div class="mx-5">
+    <button mat-button (click)="openContactDialog()">
+      <span class="font-primary m-2 text-lg">CONTACT</span>
+    </button>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,44 @@
+<div class="m-4">
+  <div class="flex w-full justify-center items-center">
+    <img
+      class="shadow-[rgba(0,0,15,0.5)_10px_5px_4px_0px]"
+      src="assets/images/banner-table.jpg"
+      alt="banner table"
+      title="Bing Generator"
+    />
+  </div>
+  <div class="w-full justify-center items-center">
+    <p-carousel
+      [value]="products!"
+      [numVisible]="3"
+      [numScroll]="3"
+      [circular]="true"
+      [showIndicators]="false"
+      [responsiveOptions]="responsiveOptions"
+      [autoplayInterval]="3000"
+      id="product-carousel"
+    >
+      <ng-template let-product pTemplate="item">
+        <div
+          class="border-1 justify-center surface-border border-round m-2 text-center py-3 px-3"
+        >
+          <div class="flex justify-center mb-3">
+            <img
+              src="assets/images/{{ product.image }}"
+              [alt]="product.name"
+              class="w-40 max-h-40 shadow-2 dark:text-white"
+            />
+          </div>
+          <div>
+            <h4 class="mb-1 dark:text-white">{{ product.name }}</h4>
+            <h6 class="mt-0 mb-3 dark:text-white">{{ "$" + product.price }}</h6>
+            <p-tag
+              [value]="product.inventoryStatus"
+              [severity]="getSeverity(product.inventoryStatus)"
+            ></p-tag>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>
